@@ -4,11 +4,15 @@ import os
 import glob
 import codecs
 import logging
-from pypugjs.ext.jinja import Compiler
+from pypugjs.ext.jinja import Compiler, PyPugJSExtension
 from pypugjs import process
 
 
 class MkDocsPug(BasePlugin):
+
+    def on_env(self, env, config, files):
+        env.extensions['pypugjs.ext.jinja.PyPugJSExtension'] = PyPugJSExtension(env)
+        return env
 
     def on_pre_build(self, config):
         # some code to clean things up

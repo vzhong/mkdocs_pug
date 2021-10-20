@@ -24,7 +24,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='mkdocs_pug',
-    version='0.0.1',
+    version='0.0.2',
 
     python_requires='>3.7',
 
