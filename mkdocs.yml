@@ -1,0 +1,14 @@
+site_name: MySite
+
+docs_dir: 'src/'
+site_dir: 'docs/'
+
+nav:
+  - Home: 'index.md'
+
+theme:
+  name: null
+  custom_dir: 'theme/'
+
+plugins:
+  - mkdocs_pug
